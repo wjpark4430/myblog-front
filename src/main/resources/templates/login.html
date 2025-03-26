@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
 </head>
 <body>
+    <div th:replace="components/header :: header"></div>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="loginForm" action="/api/loginRequest" method="post">
+        <form id="loginForm" onsubmit="handleLogin(event)">
             <div class="form-group">
-                <label for="username">Username:</label>
+                <label for="userId">Username:</label>
                 <input type="text" id="userId" name="userId" required>
             </div>
             <div class="form-group">
@@ -21,5 +24,6 @@
             <button type="submit">Login</button>
         </form>
     </div>
+    <div th:replace="components/footer :: footer"></div>
 </body>
 </html>

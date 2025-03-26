@@ -1,0 +1,62 @@
+/* 로그인 페이지 스타일 */
+.login-container {
+    background: #fff;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+}
+
+h2 {
+    color: #5a2d0c;
+    margin-bottom: 20px;
+}
+
+/* 입력 필드 스타일 */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #804000;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffec99;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* 로그인 버튼 스타일 */
+button {
+    background-color: #f4c542;
+    color: #5a2d0c;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ffdd57;
+}
+
+/* 반응형 조정 */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+    }
+}
