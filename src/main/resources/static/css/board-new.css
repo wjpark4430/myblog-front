@@ -1,0 +1,36 @@
+
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.post-container {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #ffb347;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background-color: #ff8c00;
+}
