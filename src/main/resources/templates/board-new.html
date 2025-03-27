@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 작성</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/board-new.css">
+    <script defer src="/js/board-new.js"></script>
+
+</head>
+<body>
+    <div th:replace="~{components/header :: header}"></div>
+
+    <main class="post-container">
+        <h2>게시물 작성</h2>
+        <form id="post-form" class="post-form">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" required>
+        
+            <label for="content">내용</label>
+            <textarea id="content" name="content" rows="5" required></textarea>
+        
+            <label for="image">사진 업로드</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        
+            <button type="submit" class="submit-button">게시하기</button>
+        </form>
+        
+    </main>
+
+    <div th:replace="~{components/footer :: footer}"></div>
+</body>
+</html>

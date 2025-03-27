@@ -9,7 +9,7 @@
     <script src="/js/login.js"></script>
 </head>
 <body>
-    <div th:replace="components/header :: header"></div>
+    <div th:replace="~{components/header :: header}"></div>
     <div class="login-container">
         <h2>Login</h2>
         <form id="loginForm" onsubmit="handleLogin(event)">
@@ -24,6 +24,6 @@
             <button type="submit">Login</button>
         </form>
     </div>
-    <div th:replace="components/footer :: footer"></div>
+    <div th:replace="~{components/footer :: footer}"></div>
 </body>
 </html>
