@@ -1,0 +1,89 @@
+/* 회원가입 컨테이너 */
+.signup-container {
+    background-color: #fff;
+    padding: 25px;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center; /* 내부 요소 중앙 정렬 */
+}
+
+/* 제목 스타일 */
+h2 {
+    margin-bottom: 20px;
+    color: #5a2d0c;
+}
+
+/* 폼 스타일 */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 입력창 중앙 정렬 */
+}
+
+/* 폼 그룹 (입력 필드) */
+.form-group {
+    width: 100%; /* 입력 필드가 부모 너비를 꽉 차게 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 내부 요소 중앙 정렬 */
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    align-self: flex-start; /* 라벨은 왼쪽 정렬 */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5a2d0c;
+}
+
+input {
+    width: 90%; /* 입력 필드 너비를 적당히 설정 */
+    padding: 10px;
+    border: 2px solid #ffdd57;
+    border-radius: 8px;
+    background-color: #fffaf0;
+    outline: none;
+    font-size: 16px;
+    text-align: center; /* 텍스트 입력도 중앙 정렬 */
+}
+
+input:focus {
+    border-color: #f4c542;
+}
+
+/* 버튼 스타일 */
+button {
+    width: 90%; /* 버튼도 중앙 정렬 */
+    padding: 12px;
+    background-color: #f4c542;
+    color: #5a2d0c;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ffdd57;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

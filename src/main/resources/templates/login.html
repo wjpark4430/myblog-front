@@ -10,6 +10,7 @@
 </head>
 <body>
     <div th:replace="~{components/header :: header}"></div>
+    
     <div class="login-container">
         <h2>Login</h2>
         <form id="loginForm" onsubmit="handleLogin(event)">
@@ -21,9 +22,18 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
+
+            <!-- 아이디 찾기, 비밀번호 찾기, 회원가입 버튼 -->
+            <div class="extra-buttons">
+                <a href="/find-id">아이디 찾기</a>
+                <a href="/find-password">비밀번호 찾기</a>
+                <a href="/signup">회원가입</a>
+            </div>
+
             <button type="submit">Login</button>
         </form>
     </div>
+
     <div th:replace="~{components/footer :: footer}"></div>
 </body>
 </html>

@@ -58,26 +58,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updatePagination(totalPages, currentPage) {
-        const paginationContainer = document.getElementById('pagination');
-        paginationContainer.innerHTML = ""; // 기존 버튼 초기화
+    console.log("Total Pages:", totalPages, "Current Page:", currentPage); // 확인용 로그
 
-        for (let i = 0; i < totalPages; i++) {
-            const pageButton = document.createElement('button');
-            pageButton.innerText = i + 1;
-            pageButton.classList.add('page-btn');
-
-            if (i === currentPage) {
-                pageButton.classList.add('active'); // 현재 페이지 강조
-            }
-
-            pageButton.addEventListener('click', () => {
-                fetchBoards(i);
-            });
-
-            paginationContainer.appendChild(pageButton);
-        }
+    const paginationContainer = document.getElementById('pagination');
+    if (!paginationContainer) {
+        console.error("pagination 요소가 없음!");
+        return;
     }
 
+    paginationContainer.innerHTML = ""; // 기존 버튼 초기화
+
+    for (let i = 0; i < totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.innerText = i + 1;
+        pageButton.classList.add('page-btn');
+
+        if (i === currentPage) {
+            pageButton.classList.add('active'); // 현재 페이지 강조
+        }
+
+        pageButton.addEventListener('click', () => {
+            fetchBoards(i);
+        });
+
+        paginationContainer.appendChild(pageButton);
+    }
+}
     fetchBoards(currentPage); // 첫 페이지 데이터 로드
 });
 
