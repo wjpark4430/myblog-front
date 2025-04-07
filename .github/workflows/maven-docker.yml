@@ -75,7 +75,7 @@ jobs:
       
             docker pull ${{ secrets.DOCKER_USERNAME }}/my-blog-front:${{ env.VERSION }}
             docker run --name myblog-front-instance \
-            --memory=200m --memory-swap=200m \
+            --memory=150m --memory-swap=150m \
             --network myblog-network \
             --ip ${{ secrets.CONTAINER_IP }} \
             -p 8080:8080 \
