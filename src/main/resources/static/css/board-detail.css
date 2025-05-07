@@ -30,7 +30,7 @@
     gap: 10px;
 }
 
-.like-btn, .edit-btn, .back-btn {
+.like-btn, .edit-btn, .back-btn, .delete-btn{
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -45,6 +45,11 @@
 
 .edit-btn {
     background-color: #007bff;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #BDBDBD;
     color: white;
 }
 

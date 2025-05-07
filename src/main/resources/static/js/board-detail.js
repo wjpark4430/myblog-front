@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         const post = await response.json();
         document.getElementById("post-title").textContent = post.title;
-        document.getElementById("post-content").textContent = post.content;
+        document.getElementById("post-content").innerHTML = post.content;
         document.getElementById("post-created").textContent = `등록 날짜: ${post.createdAt}`;
         document.getElementById("like-count").textContent = post.likeCount;
     } catch (error) {
@@ -31,5 +31,25 @@ document.addEventListener("DOMContentLoaded", async function () {
     // 수정 버튼 클릭 이벤트
     document.getElementById("edit-button").addEventListener("click", function () {
         window.location.href = `/boards/${postId}/edit`;
+    });
+
+    // 삭제 버튼 클릭 이벤트 
+    document.getElementById("delete-button").addEventListener("click", async function () {
+        const confirmed = confirm("정말 이 게시물을 삭제하시겠습니까?");
+        if (!confirmed) return;
+
+        try {
+            const response = await fetch(`/api/boards/${postId}`, {
+                method: "DELETE"
+            });
+
+            if (!response.ok) throw new Error("게시물 삭제 실패");
+
+            alert("게시물이 삭제되었습니다.");
+            window.location.href = "/";
+        } catch (error) {
+            console.error("삭제 중 오류 발생:", error);
+            alert("삭제 중 오류가 발생했습니다.");
+        }
     });
 });
