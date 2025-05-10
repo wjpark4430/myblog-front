@@ -34,3 +34,11 @@ input, textarea {
 .submit-button:hover {
     background-color: #ff8c00;
 }
+
+.ck-editor__editable {
+    min-height: 250px;  /* 10줄 정도 높이 */
+    line-height: 1.5;   /* 줄 간격 적당히 */
+    padding-top: 0;     /* 위에서부터 시작하도록 */
+    display: block;     /* 중앙정렬 방지 */
+    overflow-y: auto;   /* 내용 많아지면 스크롤 */
+  }

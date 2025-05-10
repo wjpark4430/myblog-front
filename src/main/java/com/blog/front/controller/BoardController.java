@@ -21,7 +21,7 @@ public class BoardController {
 
     @GetMapping("/{id}/edit")
     public String updateBoard(@RequestParam String param) {
-        return new String();
+        return "board-edit";
     }
 
 }

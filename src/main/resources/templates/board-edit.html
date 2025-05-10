@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 수정</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/board-edit.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script defer src="/js/board-edit.js"></script>
+</head>
+
+<body>
+    <div th:replace="~{components/header :: header}"></div>
+
+    <main class="post-container">
+        <h2>게시물 수정</h2>
+        <form id="post-form" class="post-form">
+            <input type="hidden" id="board-id" value="${board.id}">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" th:value="${post.title}" required>
+
+            <label for="content">내용</label>
+            <textarea id="content" name="content" th:text="${post.content}"></textarea>
+
+            <div class="button-group">
+                <button type="submit" class="submit-button">수정하기</button>
+
+                <button type="button" class="cancel-button" onclick="history.back();">취소</button>
+
+                <!--
+                <a th:href="@{/board/{id}(id=${post.id})}" class="cancel-button">취소</a>
+                -->
+            </div>
+        </form>
+    </main>
+
+    <div th:replace="~{components/footer :: footer}"></div>
+</body>
+
+</html>
